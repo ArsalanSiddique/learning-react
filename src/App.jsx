@@ -1,6 +1,8 @@
 import Counter from "./Counter";
 import User from './User';
 import Wrapper from "./Wrapper";
+import Form from './Form';
+import Skills from './Skills';
 
 function App() {
 
@@ -44,12 +46,20 @@ function App() {
       <button onClick={testing}>Testing</button> */}
 
 
-      <Wrapper>
+      {/* <Wrapper>
         <User user={userObject} />
       </Wrapper>
 
       <Wrapper color="green">
         <h1>Hello Brother</h1>
+      </Wrapper> */}
+
+      {/* <Wrapper>
+        <Form />
+      </Wrapper> */}
+
+      <Wrapper color="white">
+        <Skills />
       </Wrapper>
 
     </div>
