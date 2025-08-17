@@ -5,6 +5,9 @@ import Form from './Form';
 import Skills from './Skills';
 import Laptop from "./Laptop";
 import Mobile from "./Mobile";
+import Students from "./Students";
+import Dropdown from "./Dropdown";
+import Time from "./Time";
 
 function App() {
 
@@ -84,6 +87,12 @@ function App() {
         <Form />
       </Wrapper> */}
 
+
+      <Dropdown />
+
+      
+
+      <Students />
 
       {
         mobileData.map((item) => (
