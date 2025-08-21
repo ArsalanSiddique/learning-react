@@ -1,7 +1,7 @@
 function Header() {
     return (
-        <div>
-            <h1>Welcome to My Blog</h1>
+        <div className="m-3">
+            <h1>Welcome to My React App</h1>
         </div>
     );
 }
