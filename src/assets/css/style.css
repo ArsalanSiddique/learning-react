@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-image>img {
+    width: 100px;
+    height: 100px;
+}
+
+.card {
+    background-color: whitesmoke;
+    color: black;
+    margin: 10px;
+}
+
+.text-wrap {
+    padding: 10px;
+}
+
+.heading {
+    color: green;
+}

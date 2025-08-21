@@ -1,5 +1,6 @@
 import Counter from "./Counter";
 import User from './User';
+import Clan from './Clan';
 import Wrapper from "./Wrapper";
 import Form from './Form';
 import Skills from './Skills';
@@ -8,6 +9,11 @@ import Mobile from "./Mobile";
 import Students from "./Students";
 import Dropdown from "./Dropdown";
 import Time from "./Time";
+import College from "./College";
+import Home from "./Home";
+import Profile from "./Profile";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
 
@@ -88,13 +94,25 @@ function App() {
       </Wrapper> */}
 
 
+      {/* <College /> */}
+
+      <h2 className='heading'>Hello</h2>
+
+      <Home />
+
+      <Profile />
+      <hr />
+
+      <Clan />
+      <hr />
+
+
+      {/* 
       <Dropdown />
 
-      
+      <Students /> */}
 
-      <Students />
-
-      {
+      {/* {
         mobileData.map((item) => (
           <div key={item.id}>
             <Mobile data={item} />
@@ -102,11 +120,11 @@ function App() {
         ))
       }
 
-      <Laptop />
+      <Laptop /> */}
 
-      <Wrapper color="white">
+      {/* <Wrapper color="white">
         <Skills />
-      </Wrapper>
+      </Wrapper> */}
 
 
     </div>
