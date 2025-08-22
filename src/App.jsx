@@ -13,8 +13,15 @@ import College from "./College";
 import Home from "./Home";
 import Profile from "./Profile";
 import Todo from "./Todo";
+import Address from "./Address";
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from "react-bootstrap";
+import Contactform from "./Contactform";
+import Register from "./Register";
+import Boss from "./Boss";
+import { SubjectData } from "./ContextData";
+import { useState } from "react";
 
 function App() {
 
@@ -69,13 +76,34 @@ function App() {
   //   },
   // ];
 
+
+  const [sub, setSub] = useState('English')
+
   return (
     <div>
 
       <Container fluid style={{ height: '100vh' }}>
         <Row>
           <Col md={{ span: 6, offset: 3 }}>
-            <Todo />
+            {/* <Todo /> */}
+
+            {/* <Contactform /> */}
+
+            {/* <Register /> */}
+
+            <SubjectData.Provider value={sub}>
+              <p>This is app.jsx</p>
+              <select value={sub} onChange={(event) => { setSub(event.target.value) }}>
+                <option value="">Select</option>
+                <option value="Math">Math</option>
+                <option value="Urdu">Urdu</option>
+                <option value="English">English</option>
+                <option value="History">History</option>
+              </select>
+
+              <button onClick={() => { setSub("") }} className="btn btn-sm btn-primary">Clear</button>
+              <Boss />
+            </SubjectData.Provider>
           </Col>
         </Row>
       </Container>
