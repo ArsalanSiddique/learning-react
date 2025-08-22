@@ -21,7 +21,10 @@ import Contactform from "./Contactform";
 import Register from "./Register";
 import Boss from "./Boss";
 import { SubjectData } from "./ContextData";
-import { useState } from "react";
+import { ThemeData } from "./ContextTheme";
+import { useContext, useState } from "react";
+import Notes from "./Notes";
+import Fromvalidation from "./Fromvalidation";
 
 function App() {
 
@@ -78,20 +81,38 @@ function App() {
 
 
   const [sub, setSub] = useState('English')
+  const [theme, setTheme] = useState('default')
+
+
+  function changeTheme() {
+    console.log(theme);
+    if (theme === 'default') {
+      setTheme('dark');
+      return;
+    }
+
+    setTheme('default');
+    return;
+  }
 
   return (
     <div>
 
-      <Container fluid style={{ height: '100vh' }}>
-        <Row>
-          <Col md={{ span: 6, offset: 3 }}>
-            {/* <Todo /> */}
+      <ThemeData.Provider value={theme}>
+        <Container fluid>
+          <Row>
+            <Col md={{ span: 6, offset: 3 }}>
 
-            {/* <Contactform /> */}
 
-            {/* <Register /> */}
+              <button onClick={changeTheme}> Day/Night </button>
 
-            <SubjectData.Provider value={sub}>
+              {/* <Todo /> */}
+
+              {/* <Contactform /> */}
+
+              {/* <Register /> */}
+
+              {/* <SubjectData.Provider value={sub}>
               <p>This is app.jsx</p>
               <select value={sub} onChange={(event) => { setSub(event.target.value) }}>
                 <option value="">Select</option>
@@ -103,11 +124,22 @@ function App() {
 
               <button onClick={() => { setSub("") }} className="btn btn-sm btn-primary">Clear</button>
               <Boss />
-            </SubjectData.Provider>
-          </Col>
-        </Row>
-      </Container>
+            </SubjectData.Provider> */}
 
+
+              {/* <Notes /> */}
+
+
+              <Fromvalidation />
+
+
+
+
+
+            </Col>
+          </Row>
+        </Container>
+      </ThemeData.Provider>
     </div >
   );
 }
